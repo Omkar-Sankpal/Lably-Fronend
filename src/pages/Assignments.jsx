@@ -37,17 +37,17 @@ const Assignments = ({batch, subject}) => {
       <div className='flex justify-center mt-2'>
       <button
             onClick={handleMark}
-            className='btn btn-outline p-4 mx-1'
+            className='text-sm btn btn-outline p-2 mx-1'
             >Mark Attendance 
           </button>
       <button
             onClick={handleUT}
-            className='btn btn-outline p-4 mx-1'
+            className='text-sm btn btn-outline p-2 mx-1'
             >Unit Test Marks 
           </button>
       <button
             onClick={handleTermWork}
-            className='btn btn-outline p-4 mx-1'
+            className='text-sm btn btn-outline p-2 mx-1'
             >Term Work
           </button>
 

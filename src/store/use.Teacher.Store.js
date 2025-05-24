@@ -130,7 +130,7 @@ export const useTeacherStore = create((set) => ({
 
     individual_student: async (roll_no) => {
         try {
-          const response = await axios.post(`http://localhost:5000/api/dmsl-mini/students/student`, { roll_no });
+          const response = await axios.post(`https://lably-backend.onrender.com/api/dmsl-mini/students/student`, { roll_no });
       
           console.log(response);
       
