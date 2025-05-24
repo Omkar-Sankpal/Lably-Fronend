@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useThemeStore } from "./store/useThemeStore";
-import SettingsPage from "./Pages/SettingsPage";
+import SettingsPage from "./pages/SettingsPage";
 import StudentDash from "./pages/StudentDash";
 import Navbar from "./components/Navbar";
 import TeacherDash from "./pages/TeacherDash";
