@@ -2,7 +2,7 @@ import {create} from 'zustand';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 
-const API_URL = "http://localhost:5000/api/dmsl_mini"; 
+const API_URL = "https://lably-backend.onrender.com/api/dmsl_mini"; 
 
 export const useTeacherStore = create((set) => ({
     teacherId : null,
