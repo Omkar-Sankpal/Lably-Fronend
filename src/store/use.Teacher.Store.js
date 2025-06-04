@@ -42,9 +42,11 @@ export const useTeacherStore = create((set) => ({
           })
       
           if (Array.isArray(data) && data.length > 0) {
-            const { t_id, t_name, subject } = data[0];
-            const batches = data.map((item) => item.batch); 
-      
+            const { t_id, t_name, subject, batch_details } = data[0];
+
+            // Extract batches from batch_details
+            const batches = batch_details.map((b) => b.batch);
+
             set({
               isLoading: false,
               teacherId: t_id,
