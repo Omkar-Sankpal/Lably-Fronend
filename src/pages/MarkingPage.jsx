@@ -9,7 +9,7 @@ const MarkingPage = ({batch}) => {
     const [attendance, setAttendance] = useState(
         Attendace_studs.map((student) => ({
             roll_no: student.roll_no,
-            student_name: student.student_name,
+            student_name: student.students.student_name,
             present: student.present || false,
         }))
     );
@@ -33,6 +33,9 @@ const MarkingPage = ({batch}) => {
         // console.log(newAttendance[index].present, newAttendance[index].roll_no, batch, t_sub, currLabDate);
         await updateAttendance(newAttendance[index].present, newAttendance[index].roll_no, batch, t_sub, currLabDate)
     }
+
+    console.log(attendance, Attendace_studs);
+    
 
   return (
     <div className='relative h-[100vh] w-full overflow-hidden flex flex-col justify-center items-center'>
