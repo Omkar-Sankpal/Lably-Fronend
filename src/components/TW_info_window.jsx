@@ -68,7 +68,7 @@ const TW_info_window = () => {
             </div>
         </div>
                     <div className='text-base-content p-2 rounded-lg text-sm font-semibold mt-4'>
-                            Distrubution : Lab Marks 60% : Attendance 20% : UT Marks 0% 
+                            Distrubution of marks : Lab Marks 60% : Attendance 20% : UT Marks 0% 
                     </div>
     </motion.div>
   )
