@@ -183,6 +183,8 @@ export const useTeacherStore = create((set) => ({
 
     deleteLabSession: async(subject, batch, lab_date) => {
         try {
+          console.log("SBL :",subject, batch, lab_date);
+          
           const response = await axios.post(`${API_URL}/delete-lab-session` , {subject, batch, lab_date}) 
           
           console.log("delete session response : ",response);

@@ -24,9 +24,11 @@ const AttendancePage = ({ batch }) => {
 
   const nav = useNavigate();
 
-  useEffect(() => {
-    setLocalSessions(sessions); // Sync local state when sessions change in store
-  }, [sessions]);
+useEffect(() => {
+  if (sessions?.uniqueSessions) {
+    setLocalSessions(sessions.uniqueSessions);
+  }
+}, [sessions]);
 
   const handleCreatelab = () => {
     setOpenSession(1);

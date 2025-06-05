@@ -38,7 +38,7 @@ const StudentDetails = ({ ele }) => {
       </div>
 
       <div className='font-medium p-2 border border-primary/10 text-center w-full md:flex-1'>
-        {ele.student_name || "Name"}
+        {ele.students.student_name || "Name"}
       </div>
 
       <div className='p-2 border border-primary/10 w-full md:flex-1'>

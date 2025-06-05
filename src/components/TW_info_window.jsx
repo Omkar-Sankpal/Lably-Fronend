@@ -19,8 +19,9 @@ const TW_info_window = () => {
     const termwork = () => {
         const lab_mark = ((tw1.data[0]?.total_psdl_marks || 0)/( tw1.data[0]?.total_psdl_marks_capped || 10))*60 ; 
         const attendace =  (tw2.data[0]?.total_present/ tw2.data[0]?.total_records)*20; 
-        const ut = ((tw1.data[0]?.total_present || 0 )/90)*20 ; 
-
+        const ut = ((tw3.data?.total_marks || 0 )/90)*20 ; 
+        console.log("UT,",tw3.data?.total_marks);
+        
         return lab_mark + attendace + ut ; 
     }
 
@@ -53,7 +54,7 @@ const TW_info_window = () => {
                 UT Marks
             </div>
             <div className='text-center'>
-                {tw1.data[0]?.total_present || " Not updated"} / 90
+                {tw3.data?.total_marks || " Not updated"} / 90
             </div>
         </div>
 
@@ -61,11 +62,14 @@ const TW_info_window = () => {
             <div className='w-32 h-32 rounded-full bg-gradient-to-br from-primary via-secondary to-accent flex justify-center items-center'>
                 <div className='w-28 h-28 rounded-full bg-base-300 text-center flex justify-center items-center'>
                     <div className='text-primary text-2xl font-bold'>
-                        {Math.floor(termwork()/4)}
+                        {Math.floor(termwork()/4)}/25
                     </div>
                 </div>
             </div>
         </div>
+                    <div className='text-base-content p-2 rounded-lg text-sm font-semibold mt-4'>
+                            Distrubution : Lab Marks 60% : Attendance 20% : UT Marks 0% 
+                    </div>
     </motion.div>
   )
 }
