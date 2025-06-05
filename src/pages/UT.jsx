@@ -5,9 +5,7 @@ import { useTeacherStore } from '../store/use.Teacher.Store';
 const UT = () => {
     const {current_assignment,students, t_sub, batch, utStuds} = useTeacherStore();
 
-    console.log("elected sude",utStuds);
-    
-
+    // console.log("elected sude",utStuds);
   return (
     <div className='min-h-screen overflow-y-scroll custom-scrollbar'>
     <div className='flex flex-col min-h-screen overflow-y-scroll custom-scrollbar'>

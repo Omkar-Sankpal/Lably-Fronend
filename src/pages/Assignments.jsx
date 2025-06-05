@@ -7,7 +7,7 @@ const Assignments = ({batch, subject}) => {
 
     const {assignments, getSessions ,getBatch, getUt } = useTeacherStore()
     const nav = useNavigate();
-    console.log("assi",assignments);
+    // console.log("assi",assignments);
     
     const handleMark = async() => {
 

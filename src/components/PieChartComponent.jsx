@@ -34,6 +34,9 @@ const PieChartComponent = ({completed, remaining, title, marks, totalmarks, subj
     setDisplay(1);
   }
 
+  // console.log(completed, remaining, title, marks, totalmarks, subject);
+  
+
   return (
     <div className="card bg-base-100 shadow-xl p-4">
       <div className="card-body items-center text-center">

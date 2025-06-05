@@ -74,7 +74,7 @@ export const useTeacherStore = create((set) => ({
                 students:response.data
             })
 
-            console.log("response from getBatch : ",response);
+            // console.log("response from getBatch : ",response);
             
 
             const response2 = await axios.post(`${API_URL}/get-ass`, {subject});
@@ -100,12 +100,12 @@ export const useTeacherStore = create((set) => ({
     getStudentsAss_Details: async({a_id, batch}) => {
         try {
 
-            console.log(a_id, " batch:", batch);
+            // console.log(a_id, " batch:", batch);
             
 
             const response = await axios.post(`${API_URL}/get-ass-students`, {a_id: a_id, batch: batch}); 
 
-            console.log("Student for perticular a: " ,response.data);
+            // console.log("Student for perticular a: " ,response.data);
             
             set({
                 selected_ass_students: response.data
@@ -134,12 +134,12 @@ export const useTeacherStore = create((set) => ({
         try {
           const response = await axios.post(`https://lably-backend.onrender.com/api/dmsl-mini/students/student`, { roll_no });
       
-          console.log(response);
+          // console.log(response);
       
           if (response.data && Object.keys(response.data).length > 0) {
             set({
-              ind_stud: response.data,
-              student: response.data
+              ind_stud: response.data.data,
+              student: response.data.data
             });
           } else {
             console.warn("Student data is empty.");
@@ -183,11 +183,11 @@ export const useTeacherStore = create((set) => ({
 
     deleteLabSession: async(subject, batch, lab_date) => {
         try {
-          console.log("SBL :",subject, batch, lab_date);
+          // console.log("SBL :",subject, batch, lab_date);
           
           const response = await axios.post(`${API_URL}/delete-lab-session` , {subject, batch, lab_date}) 
           
-          console.log("delete session response : ",response);
+          // console.log("delete session response : ",response);
           toast.success(response.data.message)
         } catch (error) {
           console.log(error);
@@ -199,7 +199,7 @@ export const useTeacherStore = create((set) => ({
       try {
         const response = await axios.post(`${API_URL}/get-students-attendance` , {subject, batch, lab_date}) 
         
-        console.log("attendaceee session response : ",response);
+        // console.log("attendaceee session response : ",response);
         set({
           Attendace_studs: response.data.data, 
           currLabDate: lab_date,
@@ -214,7 +214,7 @@ export const useTeacherStore = create((set) => ({
     try {
       const response = await axios.post(`${API_URL}/update-attendance` , {present, roll_no, batch, subject, lab_date}) 
       
-      console.log("attendaceee session updated response : ",response);
+      // console.log("attendaceee session updated response : ",response);
       toast.success(`Updated ${roll_no} successfully`)
 
     } catch (error) {
@@ -226,7 +226,7 @@ export const useTeacherStore = create((set) => ({
     try {
       const response = await axios.post(`${API_URL}/update-ut-marks` , {marks1, marks2, marks3 , subject, roll_no}) 
       
-      console.log("attendaceee session updated response : ",response);
+      // console.log("attendaceee session updated response : ",response);
       toast.success(`Updated ${roll_no} successfully`)
 
     } catch (error) {
@@ -239,7 +239,7 @@ export const useTeacherStore = create((set) => ({
     try {
       const response = await axios.post(`${API_URL}/get-ut-details` , {subject , batch}) 
       
-      console.log("attendaceee session updated response : ",response);
+      // console.log("attendaceee session updated response : ",response);
 
       set({
           utStuds: response.data
@@ -257,7 +257,7 @@ export const useTeacherStore = create((set) => ({
       const res2 = await axios.post(`${API_URL}/tw2` , {subject , batch, roll_no}) 
       const res3 = await axios.post(`${API_URL}/tw3` , {subject , roll_no}) 
 
-      console.log("1", res1, "2", res2, "3",res3);
+      // console.log("1", res1, "2", res2, "3",res3);
       
 
       set({

@@ -6,7 +6,7 @@ const TermWork = () => {
 
     const {current_assignment,students, t_sub, batch, utStuds} = useTeacherStore();
 
-    console.log(students);
+    // console.log(students);
     
   return (
     <div className='min-h-screen overflow-y-scroll custom-scrollbar'>

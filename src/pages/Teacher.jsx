@@ -6,7 +6,7 @@ import animationData from '../assets/DMSL_MINI_ANIM1.json'
 
 const Teacher = ({t_name, t_sub, batches}) => {
   
-  console.log(batches);
+  // console.log(batches);
   
 
   return (

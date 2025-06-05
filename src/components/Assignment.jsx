@@ -12,7 +12,7 @@ const Assignment = ({a_id, title}) => {
     
     
     const handleAssignment = async() => {
-        console.log("Assignment: ",a_id, " batch", batch);
+        // console.log("Assignment: ",a_id, " batch", batch);
         setCurrAssignment(a_id, title)
         await getStudentsAss_Details({a_id, batch})
         navigate('/assignment');

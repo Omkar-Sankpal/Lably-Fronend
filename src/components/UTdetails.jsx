@@ -11,7 +11,7 @@ const UTdetails = ({ele}) => {
       const { current_assignment, updateUT, t_sub } = useTeacherStore();
     
       const handleUpdate = async() => {
-        console.log("Update UT : ",marks1 , marks2, marks3, t_sub, ele.roll_no);
+        // console.log("Update UT : ",marks1 , marks2, marks3, t_sub, ele.roll_no);
         
         await updateUT(marks1 , marks2, marks3, t_sub, ele.roll_no);
       };

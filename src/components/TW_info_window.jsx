@@ -6,21 +6,21 @@ const TW_info_window = () => {
 
     const {tw1, tw2, tw3 } = useTeacherStore();
     
-    console.log(
-        "1 : " , tw1 , 
-        "2 " , tw2, 
-        " 3 : ", tw3 
-    );
+    // console.log(
+    //     "1 : " , tw1 , 
+    //     "2 " , tw2, 
+    //     " 3 : ", tw3 
+    // );
     
-    console.log(tw1.data[0]?.total_psdl_marks , "/" , tw1.data[0]?.total_psdl_marks_capped);
-    console.log(tw2.data[0]?.total_present, "/" , tw2.data[0]?.total_records);
-    console.log(tw3.data);
+    // console.log(tw1.data[0]?.total_psdl_marks , "/" , tw1.data[0]?.total_psdl_marks_capped);
+    // console.log(tw2.data[0]?.total_present, "/" , tw2.data[0]?.total_records);
+    // console.log(tw3.data);
     
     const termwork = () => {
         const lab_mark = ((tw1.data[0]?.total_psdl_marks || 0)/( tw1.data[0]?.total_psdl_marks_capped || 10))*60 ; 
         const attendace =  (tw2.data[0]?.total_present/ tw2.data[0]?.total_records)*20; 
         const ut = ((tw3.data?.total_marks || 0 )/90)*20 ; 
-        console.log("UT,",tw3.data?.total_marks);
+        // console.log("UT,",tw3.data?.total_marks);
         
         return lab_mark + attendace + ut ; 
     }

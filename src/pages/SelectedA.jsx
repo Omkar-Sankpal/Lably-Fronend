@@ -6,7 +6,7 @@ const SelectedA = () => {
 
     const {current_assignment, selected_ass_students} = useTeacherStore();
 
-    console.log("elected sude",selected_ass_students);
+    // console.log("elected sude",selected_ass_students);
     
 
   return (
