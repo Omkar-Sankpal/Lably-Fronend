@@ -37,27 +37,26 @@ This repository contains the **frontend** code of the project, developed using *
 
 ---
 
-## ⚙️ Tech Stack
+## 🧑‍💻 Tech Stack
 
-| Layer           | Technology                        |
-|------------------|------------------------------------|
-| Frontend Framework | [React 19](https://react.dev/)             |
-| Styling         | [Tailwind CSS](https://tailwindcss.com/) |
-| Animations      | [GSAP](https://greensock.com/gsap/), [Framer Motion](https://www.framer.com/motion/), [Lottie](https://airbnb.io/lottie/) |
-| State Management| [Zustand](https://github.com/pmndrs/zustand) |
-| Routing         | [React Router v7](https://reactrouter.com/) |
-| HTTP Client     | [Axios](https://axios-http.com/)         |
-| Realtime Comm.  | [Socket.IO Client](https://socket.io/)   |
-| Notifications   | [react-hot-toast](https://react-hot-toast.com) |
-| Carousels       | [react-slick](https://react-slick.neostack.com/) + [slick-carousel](https://kenwheeler.github.io/slick/) |
-| Build Tool      | [Vite](https://vitejs.dev/)             |
+| Category         | Tech                              |
+|------------------|-----------------------------------|
+| Framework        | React 19                          |
+| Styling          | Tailwind CSS                      |
+| State Management | Zustand                           |
+| Animations       | Framer Motion, GSAP, Lottie       |
+| Routing          | React Router v7                   |
+| HTTP Client      | Axios                             |
+| Toasts           | React Hot Toast                   |
+| Icons            | Lucide React                      |
+| Build Tool       | Vite                              |
 
 ---
 
 ## 🚀 Deployment
 
 The frontend is deployed on **Render**. You can access the deployed site here:  
-👉 https://hack-of-clans-frontend.onrender.com
+👉 [Lably](https://lably-fronend.onrender.com)
 
 ---
 
@@ -65,28 +64,21 @@ The frontend is deployed on **Render**. You can access the deployed site here:
 
 ```bash
 Frontend/
-├── public/                     # Public static assets
-├── src/                        # Main source code
-│   ├── assets/                # Images, logos, and static assets
-│   ├── components/            # Reusable UI components
-│   ├── explore/               # Exploration or discovery-related views
-│   ├── myteams/               # Team management views and components
-│   ├── pages/                 # Core route-level pages (Dashboard, Login, etc.)
-│   ├── profile/               # User profile-related components/pages
-│   ├── store/                 # Zustand state management store
-│   ├── utils/                 # Utility functions/helpers
-│   ├── App.jsx                # Root component
-│   ├── index.css              # Global stylesheet
-│   └── main.jsx               # App entry point
-├── .gitignore                 # Files to ignore in git
-├── index.html                 # HTML entry file for Vite
-├── package.json               # NPM dependencies and scripts
-├── package-lock.json          # Lockfile for consistent installs
-├── postcss.config.js          # PostCSS config for Tailwind
-├── tailwind.config.js         # Tailwind CSS custom configuration
-├── eslint.config.js           # ESLint rules
-├── vite.config.js             # Vite dev/build config
-└── README.md                  # Project documentation
+├── public/ # Static files
+├── src/
+│ ├── assets/ # Images, icons, logos
+│ ├── components/ # Reusable UI elements
+│ ├── constants/ # Configs and reusable data/constants
+│ ├── pages/ # Route-level components
+│ ├── store/ # Zustand stores
+│ ├── App.jsx # Root component
+│ ├── index.css # Global styles (Tailwind)
+│ └── main.jsx # React entry point
+├── index.html
+├── package.json
+├── tailwind.config.js
+├── vite.config.js
+└── README.md
 ```
 
 ## 🛠️ Getting Started
@@ -96,7 +88,7 @@ Clone and run the project locally:
 Do setup backend from the backend repo
 
 ```bash
-git clone https://github.com/Omkar-Sankpal/Hack_Of_Clans_Frontend.git
+git clone https://github.com/Omkar-Sankpal/Lably-Fronend.git
 cd lably-frontend
 npm install
 npm run dev
