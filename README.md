@@ -6,6 +6,12 @@ This repository contains the **frontend** code of the project, developed using *
 
 ---
 
+## Video Demo 
+
+https://github.com/user-attachments/assets/874e4a94-1a92-4e9b-b7ea-2fc292ab6c91
+
+---
+
 ## 🎯 Features
 
 ### 👩‍🏫 Teacher Dashboard
