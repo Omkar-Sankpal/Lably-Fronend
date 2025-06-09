@@ -8,7 +8,7 @@ const TeacherDash = () => {
   const [password, setpassword] = useState('');
 
   const nav = useNavigate();
-    const {getT, teacherId} = useTeacherStore();
+    const {getT, teacherId, isLoading} = useTeacherStore();
 
 
     useEffect(() => {
@@ -43,7 +43,7 @@ const TeacherDash = () => {
           <input
             type="text"
             className="input input-bordered flex-1 text-sm h-10"
-            placeholder="Enter your Teacher ID"
+            placeholder="Enter your Teacher ID eg:101"
             value={teacherId1}
             onChange={(e) => setid(e.target.value)}
           />
@@ -51,16 +51,25 @@ const TeacherDash = () => {
         <input
             type="password"
             className="input input-bordered flex-1 text-sm h-10"
-            placeholder="Password"
+            placeholder="Password (try : pict123)"
             value={password}
             onChange={(e) => setpassword(e.target.value)}
             />
     </div>
 
 
-          <div className="flex justify-center mt-6">
+
+
+          {
+            isLoading ?          
+            <div className='flex justify-center mt-6'>
+                <button className="btn text-xs" onClick={handleTeacher} disabled={true}>Hang on while the backend loads ...</button>
+            </div>
+            :
+            <div className="flex justify-center mt-6">
             <button className="btn" onClick={handleTeacher}>Submit</button>
-          </div>
+            </div>
+          }
 
           <div className='flex justify-center text-sm'>
                 <p>
