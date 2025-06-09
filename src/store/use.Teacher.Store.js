@@ -132,12 +132,18 @@ export const useTeacherStore = create((set) => ({
 
     individual_student: async (roll_no) => {
         try {
+
+          set({
+            isLoading: true
+          })
+
           const response = await axios.post(`https://lably-backend.onrender.com/api/dmsl-mini/students/student`, { roll_no });
       
           // console.log(response);
       
           if (response.data && Object.keys(response.data).length > 0) {
             set({
+              isLoading: false,
               ind_stud: response.data.data,
               student: response.data.data
             });

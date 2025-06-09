@@ -10,7 +10,7 @@ const StudentDash = () => {
     const [password, setpassword] = useState('');
   
     const nav = useNavigate();
-    const { getT, teacherId, individual_student, student } = useTeacherStore();
+    const { getT, teacherId, individual_student, student, isLoading } = useTeacherStore();
 
   
     useEffect(() => {
@@ -41,13 +41,21 @@ const StudentDash = () => {
           <input
             type="text"
             className="input input-bordered flex-1 text-sm h-10"
-            placeholder="Enter your Roll number"
+            placeholder="Roll number 23301-87"
             value={roll}
             onChange={(e) => setRoll(e.target.value)}
           />
-          <div className="flex justify-center mt-6">
+
+          {
+            isLoading ?          
+            <div className='flex justify-center mt-6'>
+                <button className="btn text-xs" onClick={handleStudent} disabled={true}>Hang on while the backend loads ...</button>
+            </div>
+            :
+            <div className="flex justify-center mt-6">
             <button className="btn" onClick={handleStudent}>Submit</button>
-          </div>
+            </div>
+          }
 
           <div className='flex justify-center text-sm'>
                 <p>
