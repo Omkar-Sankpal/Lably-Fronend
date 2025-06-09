@@ -43,7 +43,7 @@ const TeacherDash = () => {
           <input
             type="text"
             className="input input-bordered flex-1 text-sm h-10"
-            placeholder="Enter your Teacher ID eg:101"
+            placeholder="Enter Teacher ID eg:101"
             value={teacherId1}
             onChange={(e) => setid(e.target.value)}
           />
